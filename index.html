@@ -2,57 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>CAMIS ALICANTE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAMIS ALICANTE | Viste el fútbol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <h1>CAMIS ALICANTE</h1>
-    <div class="cart">🛒 0</div>
-  </nav>
+  <header class="navbar">
+    <div class="logo">CAMIS ALICANTE</div>
+    <div class="cart" aria-label="Carrito de compras">🛒 <span class="cart-count">0</span></div>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Viste el fútbol</h2>
-    <p>Camisetas normales por 20€ y retro por 30€</p>
-    <button>Explorar colección</button>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Viste el fútbol</h2>
+        <p>Camisetas normales por <strong>20€</strong> y retro por <strong>30€</strong></p>
+        <button class="btn-primary">Explorar colección</button>
+      </div>
+    </section>
 
-  <!-- Productos -->
-  <section class="products">
+    <section class="products" id="coleccion">
+      <h2 class="section-title">Nuestra Colección</h2>
+      
+      <div class="grid-container">
+        <article class="card">
+          <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Camiseta FC Barcelona 24/25">
+            <span class="badge normal">Normal</span>
+          </div>
+          <div class="card-info">
+            <h3>Camiseta FC Barcelona 24/25</h3>
+            <p class="price">20€</p>
+            <button class="btn-secondary">Añadir al carrito</button>
+          </div>
+        </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
-      <h3>Camiseta FC Barcelona 24/25</h3>
-      <p class="type">Normal</p>
-      <p class="price">20€</p>
-      <button>Añadir al carrito</button>
-    </div>
+        <article class="card">
+          <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e" alt="Camiseta Real Madrid 98/99">
+            <span class="badge retro">Retro</span>
+          </div>
+          <div class="card-info">
+            <h3>Camiseta Real Madrid 98/99</h3>
+            <p class="price">30€</p>
+            <button class="btn-secondary">Añadir al carrito</button>
+          </div>
+        </article>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e">
-      <h3>Camiseta Real Madrid 98/99</h3>
-      <p class="type">Retro</p>
-      <p class="price">30€</p>
-      <button>Añadir al carrito</button>
-    </div>
+        <article class="card">
+          <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Camiseta PSG 24/25">
+            <span class="badge normal">Normal</span>
+          </div>
+          <div class="card-info">
+            <h3>Camiseta PSG 24/25</h3>
+            <p class="price">20€</p>
+            <button class="btn-secondary">Añadir al carrito</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b">
-      <h3>Camiseta PSG 24/25</h3>
-      <p class="type">Normal</p>
-      <p class="price">20€</p>
-      <button>Añadir al carrito</button>
-    </div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 CAMIS ALICANTE</p>
-    <p>@camisalicante</p>
+  <footer class="footer">
+    <p>© 2026 CAMIS ALICANTE. Todos los derechos reservados.</p>
+    <p><a href="#">@camisalicante</a></p>
   </footer>
 
 </body>

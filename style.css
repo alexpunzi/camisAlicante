@@ -1,101 +1,218 @@
+/* Reset básico para que se vea igual en todos los navegadores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #000, #1a1a1a, #333);
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Navbar */
+/* --- Tipografía y Botones --- */
+h1, h2, h3 { font-weight: 700; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb; /* Azul deportivo */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px); /* Efecto de elevarse un poco */
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 10px 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+  color: #111;
+}
+
+/* --- Navbar --- */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky; /* Se queda pegado arriba al hacer scroll */
+  top: 0;
+  z-index: 100;
 }
 
-.navbar h1 {
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.cart {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  background-color: #ef4444; /* Rojo notificación */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+/* --- Hero Section --- */
+.hero {
+  /* Imagen de fondo de estadio oscurecida para que el texto resalte */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1518605368461-1ee125225f4b?auto=format&fit=crop&q=80') center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 400;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #ccc;
-}
-
-.hero button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  background: white;
-  color: black;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-/* Productos */
+/* --- Productos --- */
 .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card {
-  background: #111;
-  border-radius: 15px;
-  padding: 15px;
+.section-title {
   text-align: center;
-  transition: transform 0.3s;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.grid-container {
+  display: grid;
+  /* Magia de CSS Grid: Hace que la web sea responsiva automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjetas (Cards) */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.card img {
+.img-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.img-container img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover; /* Evita que la imagen se deforme */
+  transition: transform 0.5s ease;
 }
 
-.type {
-  color: #aaa;
-  font-size: 0.9rem;
+.card:hover .img-container img {
+  transform: scale(1.05); /* Zoom sutil al pasar el ratón */
+}
+
+/* Etiquetas (Normal / Retro) sobre la imagen */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.badge.normal { background-color: #3b82f6; }
+.badge.retro { background-color: #f59e0b; }
+
+.card-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #111;
 }
 
 .price {
-  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 15px;
 }
 
-.card button {
-  padding: 10px;
-  border: none;
-  background: white;
-  color: black;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
+/* --- Footer --- */
+.footer {
+  background-color: #111;
+  color: #9ca3af;
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid #444;
+  padding: 30px 20px;
   margin-top: 40px;
-  color: #aaa;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
