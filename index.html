@@ -1,197 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMIS ALICANTE | Viste el fútbol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAMIS ALICANTE | Viste el fútbol</title>
+
+  <!-- Optimización fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header class="navbar">
-    <div class="logo">CAMIS ALICANTE</div>
-    <div class="cart" aria-label="Carrito de compras">🛒 <span class="cart-count">0</span></div>
-  </header>
+<header class="navbar">
+  <div class="logo">CAMIS ALICANTE</div>
+  <div class="cart" role="button" tabindex="0" aria-label="Abrir carrito">
+    🛒 <span class="cart-count">0</span>
+  </div>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Viste el fútbol</h2>
-        <p>Camisetas normales por <strong>20€</strong> y retro por <strong>30€</strong></p>
-        <button class="btn-primary">Explorar colección</button>
-      </div>
-    </section>
+<main>
 
-    <section class="products" id="coleccion">
-      <h2 class="section-title">Nuestra Colección</h2>
-      
-      <div class="grid-container">
-        
-                <article class="card">
-          <div class="img-container">
-            <img src="retroValencia20002001.jpeg" alt="Retro Valencia 2000-2001">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Valencia 2000-2001</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Viste el fútbol</h2>
+      <p>Camisetas normales por <strong>20€</strong> y retro por <strong>30€</strong></p>
+      <button class="btn-primary" onclick="document.getElementById('coleccion').scrollIntoView({behavior: 'smooth'})">
+        Explorar colección
+      </button>
+    </div>
+  </section>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Real Madrid 1994-1996">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Real Madrid 1994-1996</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+  <!-- PRODUCTOS -->
+  <section class="products" id="coleccion">
+    <h2 class="section-title">Nuestra Colección</h2>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Bayern Múnich 125.º aniversario – Oktoberfest">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>Bayern Múnich 125.º aniversario – Oktoberfest</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+    <div class="grid-container">
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Barcelona 1996-1997">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Barcelona 1996-1997</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+      <!-- CARD -->
+      <article class="card">
+        <div class="img-container">
+          <img src="retroValencia20002001.jpeg" alt="Camiseta retro Valencia 2000-2001" loading="lazy">
+          <span class="badge retro">Retro</span>
+        </div>
+        <div class="card-info">
+          <h3>Valencia 2000-2001</h3>
+          <p class="price">30€</p>
+          <button class="btn-secondary">Añadir al carrito</button>
+        </div>
+      </article>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Barcelona 2008-2009">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Barcelona 2008-2009</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+      <article class="card">
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Real Madrid 1994-1996" loading="lazy">
+          <span class="badge retro">Retro</span>
+        </div>
+        <div class="card-info">
+          <h3>Real Madrid 1994-1996</h3>
+          <p class="price">30€</p>
+          <button class="btn-secondary">Añadir al carrito</button>
+        </div>
+      </article>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Real Madrid 2007-2008">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Real Madrid 2007-2008</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+      <article class="card">
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Bayern Múnich Oktoberfest" loading="lazy">
+          <span class="badge normal">Normal</span>
+        </div>
+        <div class="card-info">
+          <h3>Bayern Múnich Oktoberfest</h3>
+          <p class="price">20€</p>
+          <button class="btn-secondary">Añadir al carrito</button>
+        </div>
+      </article>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Betis 1995-1997">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Betis 1995-1997</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+      <article class="card">
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Barcelona 1996-1997" loading="lazy">
+          <span class="badge retro">Retro</span>
+        </div>
+        <div class="card-info">
+          <h3>Barcelona 1996-1997</h3>
+          <p class="price">30€</p>
+          <button class="btn-secondary">Añadir al carrito</button>
+        </div>
+      </article>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Atlético de Madrid 2025-2026">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>Atlético de Madrid 2025-2026</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+    </div>
+  </section>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Como 2025-2026">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>Como 2025-2026</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+</main>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="PSG 2025-2026">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>PSG 2025-2026</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
+<footer class="footer">
+  <p>© 2026 CAMIS ALICANTE</p>
+  <p><a href="#">@camisalicante</a></p>
+</footer>
 
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="O. Marsella 2025-2026 Visitante">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>O. Marsella 2025-2026 Visitante</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
-
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="Retro Barcelona 2007-2008 Manga Larga">
-            <span class="badge retro">Retro</span>
-          </div>
-          <div class="card-info">
-            <h3>Retro Barcelona 2007-2008 Manga Larga</h3>
-            <p class="price">30€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
-
-                <article class="card">
-          <div class="img-container">
-            <img src="https://images.unsplash.com/photo-1589187155478-96fef4c55c4b" alt="España 2026 Visitante">
-            <span class="badge normal">Normal</span>
-          </div>
-          <div class="card-info">
-            <h3>España 2026 Visitante</h3>
-            <p class="price">20€</p>
-            <button class="btn-secondary">Añadir al carrito</button>
-          </div>
-        </article>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2026 CAMIS ALICANTE. Todos los derechos reservados.</p>
-    <p><a href="#">@camisalicante</a></p>
-  </footer>
+<!-- JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
