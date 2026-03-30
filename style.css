@@ -1,12 +1,12 @@
 /* VARIABLES */
 :root {
-  --color-primary: #00f0ff;
-  --color-primary-dark: #00c8d9;
+  --color-primary: #00aaff;
+  --color-primary-dark: #0088cc;
   --color-accent: #ff4d6d;
-  --color-bg: #0a0f1a;
-  --color-text: #e0e6f0;
-  --card-bg: #1a1f2f;
-  --shadow: rgba(0, 240, 255, 0.3);
+  --color-bg: #f5f7fa;
+  --color-text: #111827;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 170, 255, 0.3);
 }
 
 /* RESET */
@@ -28,11 +28,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
-  background: #111827;
+  background: #ffffffcc;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -51,25 +52,36 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('./img/hero-futbol.jpg') center/cover no-repeat;
   height: 100vh;
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+                    url('img/hero-futbol.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: var(--color-text);
   position: relative;
+  animation: zoom 20s infinite alternate;
+}
+
+@keyframes zoom {
+  0% { background-size: 100% auto; }
+  100% { background-size: 110% auto; }
 }
 
 .hero-content h1 {
   font-size: 4rem;
-  text-shadow: 0 0 20px var(--color-primary);
+  color: var(--color-primary);
+  text-shadow: 0 0 20px rgba(0,170,255,0.5);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin: 20px 0;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .btn-primary {
@@ -96,7 +108,7 @@ body {
   font-size: 2.5rem;
   margin-bottom: 50px;
   color: var(--color-primary);
-  text-shadow: 0 0 10px #00f0ff33;
+  text-shadow: 0 0 10px rgba(0,170,255,0.2);
 }
 
 .grid-container {
@@ -111,7 +123,7 @@ body {
   border-radius: 15px;
   overflow: hidden;
   transition: 0.4s;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 .card:hover {
@@ -152,8 +164,8 @@ body {
 }
 
 .badge.normal {
-  background: linear-gradient(45deg, #00f0ff, #0088aa);
-  color: #111;
+  background: linear-gradient(45deg, #00aaff, #0088cc);
+  color: #fff;
 }
 
 .card-info {
@@ -188,8 +200,8 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #111;
-  color: #aaa;
+  background: #f0f0f5;
+  color: #555;
   text-align: center;
   padding: 30px;
   margin-top: 50px;
