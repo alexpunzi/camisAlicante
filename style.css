@@ -1,10 +1,12 @@
- /* VARIABLES PRO */
+/* VARIABLES */
 :root {
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #ef4444;
-  --color-bg: #f8f9fa;
-  --color-text: #333;
+  --color-primary: #00f0ff;
+  --color-primary-dark: #00c8d9;
+  --color-accent: #ff4d6d;
+  --color-bg: #0a0f1a;
+  --color-text: #e0e6f0;
+  --card-bg: #1a1f2f;
+  --shadow: rgba(0, 240, 255, 0.3);
 }
 
 /* RESET */
@@ -24,79 +26,97 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 5%;
-  background: white;
+  background: #111827;
   position: sticky;
   top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
 }
 
 .cart-count {
   background: var(--color-accent);
-  color: white;
+  color: #fff;
   border-radius: 50%;
-  padding: 2px 8px;
+  padding: 3px 9px;
+  font-size: 0.9rem;
 }
 
 /* HERO */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('img/hero-futbol.jpg') center/cover no-repeat;
-  height: 60vh;
+              url('./img/hero-futbol.jpg') center/cover no-repeat;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  position: relative;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+.hero-content h1 {
+  font-size: 4rem;
+  text-shadow: 0 0 20px var(--color-primary);
 }
 
-/* BOTONES */
-button {
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  text-shadow: 0 0 10px #000;
 }
 
 .btn-primary {
   background: var(--color-primary);
-  color: white;
-  padding: 12px 24px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-primary:hover {
   background: var(--color-primary-dark);
+  transform: scale(1.05);
 }
 
-.btn-secondary {
-  width: 100%;
-  padding: 10px;
-}
-
-/* GRID */
+/* PRODUCTOS */
 .products {
-  padding: 60px 5%;
+  padding: 80px 5%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px #00f0ff33;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 /* CARD */
 .card {
-  background: white;
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: 15px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px var(--shadow);
 }
 
 .img-container {
@@ -108,32 +128,84 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
+}
+
+.img-container img:hover {
+  transform: scale(1.05);
 }
 
 /* BADGES */
 .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  color: white;
-  border-radius: 20px;
+  top: 12px;
+  right: 12px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
-.badge.retro { background: orange; }
-.badge.normal { background: blue; }
+.badge.retro {
+  background: linear-gradient(45deg, #ffb347, #ffcc33);
+  color: #111;
+}
+
+.badge.normal {
+  background: linear-gradient(45deg, #00f0ff, #0088aa);
+  color: #111;
+}
+
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.card-info .price {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.05);
+}
 
 /* FOOTER */
 .footer {
   background: #111;
   color: #aaa;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2rem;
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
   }
 }
