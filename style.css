@@ -13,11 +13,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Hace que el salto de secciones sea suave */
+}
+
 /* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-text);
-
   background: 
     linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
     url('img/fondo-futbol.jpg');
@@ -34,9 +37,9 @@ body {
   padding: 18px 6%;
   position: sticky;
   top: 0;
-
   background: rgba(255,255,255,0.8);
   backdrop-filter: blur(12px);
+  z-index: 100; /* Asegura que el menú siempre esté por encima del resto */
 }
 
 .logo {
@@ -54,7 +57,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 80vh; /* Altura reducida para que se asomen los productos */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,11 +89,17 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0088cc, #005f99);
+  transform: scale(1.05); /* Efecto de crecimiento al pasar el ratón */
 }
 
 /* PRODUCTOS */
 .products {
-  padding: 100px 6%;
+  padding: 60px 6%; /* Hueco superior reducido */
 }
 
 .section-title {
@@ -121,6 +130,7 @@ body {
 
 .img-container {
   height: 230px;
+  position: relative; /* ¡Crucial para fijar las etiquetas (badges) en la tarjeta! */
 }
 
 .img-container img {

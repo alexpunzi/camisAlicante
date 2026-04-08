@@ -7,43 +7,39 @@
 
   <link rel="icon" href="camisAlicanteIcono.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="navbar">
-  <div class="logo">
-    <img src="img/camisAlicanteSinFondo.png" class="logo-img">
-    CAMIS ALICANTE
-  </div>
+  <a href="#" style="text-decoration: none;">
+    <div class="logo">
+      <img src="img/camisAlicanteSinFondo.png" class="logo-img" alt="Logotipo de Camis Alicante">
+      CAMIS ALICANTE
+    </div>
+  </a>
 </header>
 
 <main>
-
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Iconos del fútbol</h1>
       <p>Camisetas con historia para verdaderos aficionados</p>
 
-      <button class="btn-primary" onclick="document.getElementById('coleccion').scrollIntoView({behavior: 'smooth'})">
+      <a href="#coleccion" class="btn-primary" style="text-decoration: none; display: inline-block;">
         Ver colección
-      </button>
+      </a>
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
   <section class="products" id="coleccion">
     <h2 class="section-title">Nuestra Colección</h2>
 
     <div class="grid-container">
-
-      <!-- CARD -->
       <article class="card">
         <div class="img-container">
-          <img src="img/real-madrid-1994-1996.jpeg">
+          <img src="img/real-madrid-1994-1996.jpeg" alt="Camiseta retro del Real Madrid temporada 1994-1996" loading="lazy">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
@@ -55,8 +51,8 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/bayern-oktoberfest.jpeg">
-          <span class="badge normal">Normal</span>
+          <img src="img/bayern-oktoberfest.jpeg" alt="Camiseta Bayern Múnich Oktoberfest" loading="lazy">
+          <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Bayern Múnich Oktoberfest</h3>
@@ -67,7 +63,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/barcelona-1996-1997.jpeg">
+          <img src="img/barcelona-1996-1997.jpeg" alt="Camiseta retro del Barcelona 1996-1997" loading="lazy">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
@@ -79,7 +75,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/barcelona-2008-2009.jpeg">
+          <img src="img/barcelona-2008-2009.jpeg" alt="Camiseta retro del Barcelona 2008-2009" loading="lazy">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
@@ -91,7 +87,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/retro-real-madrid-2007-2008.jpeg">
+          <img src="img/retro-real-madrid-2007-2008.jpeg" alt="Camiseta retro del Real Madrid 2007-2008" loading="lazy">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
@@ -103,7 +99,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/retro-betis-1995-1997.jpg">
+          <img src="img/retro-betis-1995-1997.jpg" alt="Camiseta retro del Betis 1995-1997" loading="lazy">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
@@ -115,7 +111,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/atletico-de-madrid-2025-2026.jpg">
+          <img src="img/atletico-de-madrid-2025-2026.jpg" alt="Camiseta Atlético de Madrid 2025-2026 Lookman 22" loading="lazy">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
@@ -127,7 +123,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/psg-2025-2026.jpg">
+          <img src="img/psg-2025-2026.jpg" alt="Camiseta PSG 2025-2026" loading="lazy">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
@@ -139,7 +135,7 @@
 
       <article class="card">
         <div class="img-container">
-          <img src="img/o-marsella-2025-2026-visitante.jpg">
+          <img src="img/o-marsella-2025-2026-visitante.jpg" alt="Camiseta Olympique Marsella 2025-2026 Visitante" loading="lazy">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
@@ -148,10 +144,8 @@
           <span class="catalogo-text">Disponible</span>
         </div>
       </article>
-
     </div>
   </section>
-
 </main>
 
 <footer class="footer">
