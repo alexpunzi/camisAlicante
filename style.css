@@ -49,14 +49,6 @@ body {
   color: var(--color-primary);
 }
 
-.cart-count {
-  background: var(--color-accent);
-  color: #fff;
-  border-radius: 50%;
-  padding: 3px 9px;
-  font-size: 0.9rem;
-}
-
 /* HERO */
 .hero {
   height: 100vh;
