@@ -19,14 +19,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-text);
-  
-  /* NUEVO: IMAGEN DE FONDO PARA TODA LA PÁGINA */
-  background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-                    url('img/hero-futbol.jpeg'); /* Cambia la ruta/nombre aquí si usas otra imagen */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Mantiene el fondo estático al hacer scroll */
+  background-color: #f8f9fa;
 }
 
 /* NAVBAR */
@@ -47,6 +40,16 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-primary);
+  /* Nuevas líneas para alinear el logo y el texto */
+  display: flex;
+  align-items: center; /* Centra verticalmente la imagen y el texto */
+  gap: 10px; /* Espacio de separación entre la imagen y el texto */
+}
+
+/* Nueva regla para controlar el tamaño del logo */
+.logo-img {
+  height: 40px; /* Ajusta este valor para hacer el logo más grande o más pequeño */
+  width: auto; /* Mantiene las proporciones de la imagen */
 }
 
 /* HERO */
@@ -64,14 +67,16 @@ body {
 .hero-content h1 {
   font-size: 4rem;
   color: var(--color-primary);
-  text-shadow: 0 0 20px rgba(0,170,255,0.5), 0 0 10px rgba(255,255,255,0.8);
+  /* Hemos quitado la sombra blanca y dejado solo una sombra muy sutil azul para que siga teniendo estilo */
+  text-shadow: 0 4px 10px rgba(0, 170, 255, 0.2); 
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin: 20px 0;
-  text-shadow: 0 0 10px rgba(255,255,255,0.9);
   font-weight: 500;
+  color: var(--color-text); /* Aseguramos que use el color de texto oscuro */
+  text-shadow: none; /* Quitamos la sombra blanca por completo */
 }
 
 .btn-primary {
