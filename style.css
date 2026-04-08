@@ -57,7 +57,7 @@ body {
 
 /* HERO */
 .hero {
-  min-height: 80vh; /* Altura reducida para que se asomen los productos */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
