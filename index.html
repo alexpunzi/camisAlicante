@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAMIS ALICANTE | Viste el fútbol</title>
-  <link rel="icon" href="camisAlicanteIcono.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>CAMIS ALICANTE | Catálogo de camisetas</title>
+
+  <link rel="icon" href="camisAlicanteIcono.ico">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,132 +15,137 @@
 
 <header class="navbar">
   <div class="logo">
-    <img src="img/camisAlicanteSinFondo.png" alt="Logo Camis Alicante" class="logo-img">
+    <img src="img/camisAlicanteSinFondo.png" class="logo-img">
     CAMIS ALICANTE
   </div>
 </header>
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Viste el fútbol</h1>
-      <p>Camisetas normales por <strong>20€</strong> y retro por <strong>30€</strong></p>
+      <h1>Iconos del fútbol</h1>
+      <p>Camisetas con historia para verdaderos aficionados</p>
+
       <button class="btn-primary" onclick="document.getElementById('coleccion').scrollIntoView({behavior: 'smooth'})">
-        Explorar colección
+        Ver colección
       </button>
     </div>
   </section>
 
+  <!-- PRODUCTOS -->
   <section class="products" id="coleccion">
     <h2 class="section-title">Nuestra Colección</h2>
+
     <div class="grid-container">
 
+      <!-- CARD -->
       <article class="card">
         <div class="img-container">
-          <img src="img/real-madrid-1994-1996.jpeg" alt="Camiseta retro Real Madrid 1994-1996" loading="lazy">
+          <img src="img/real-madrid-1994-1996.jpeg">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Real Madrid 1994-1996</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/bayern-oktoberfest.jpeg" alt="Camiseta Bayern Múnich Oktoberfest" loading="lazy">
-          <span class="badge retro">Normal</span>
+          <img src="img/bayern-oktoberfest.jpeg">
+          <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
           <h3>Bayern Múnich Oktoberfest</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/barcelona-1996-1997.jpeg" alt="Camiseta retro Barcelona 1996-1997" loading="lazy">
+          <img src="img/barcelona-1996-1997.jpeg">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Barcelona 1996-1997</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/barcelona-2008-2009.jpeg" alt="Camiseta retro Barcelona 2008-2009" loading="lazy">
+          <img src="img/barcelona-2008-2009.jpeg">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Barcelona 2008-2009</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/retro-real-madrid-2007-2008.jpeg" alt="Camiseta Retro Real Madrid 2007-2008" loading="lazy">
+          <img src="img/retro-real-madrid-2007-2008.jpeg">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Real Madrid 2007-2008</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/retro-betis-1995-1997.jpg" alt="Camiseta Retro Betis 1995-1997" loading="lazy">
+          <img src="img/retro-betis-1995-1997.jpg">
           <span class="badge retro">Retro</span>
         </div>
         <div class="card-info">
           <h3>Betis 1995-1997</h3>
-          <p class="price">30€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 30€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/atletico-de-madrid-2025-2026.jpg" alt="Camiseta Atlético de Madrid 2025-2026 Lookman 22" loading="lazy">
+          <img src="img/atletico-de-madrid-2025-2026.jpg">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
           <h3>Atlético de Madrid 2025-2026 Lookman 22</h3>
-          <p class="price">25€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 25€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/psg-2025-2026.jpg" alt="Camiseta PSG 2025-2026" loading="lazy">
+          <img src="img/psg-2025-2026.jpg">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
           <h3>PSG 2025-2026</h3>
-          <p class="price">20€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 20€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
       <article class="card">
         <div class="img-container">
-          <img src="img/o-marsella-2025-2026-visitante.jpg" alt="Camiseta O. Marsella 2025-2026 Visitante" loading="lazy">
+          <img src="img/o-marsella-2025-2026-visitante.jpg">
           <span class="badge normal">Normal</span>
         </div>
         <div class="card-info">
           <h3>O. Marsella 2025-2026 Visitante</h3>
-          <p class="price">20€</p>
-          <button class="btn-secondary">Comprar</button>
+          <p class="price">Referencia: 20€</p>
+          <span class="catalogo-text">Disponible</span>
         </div>
       </article>
 
@@ -154,6 +159,5 @@
   <p><a href="#">@camisalicante</a></p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
