@@ -1,72 +1,125 @@
 <!DOCTYPE html>
+<!-- Indica que el documento es HTML5 -->
+
 <html lang="es">
+<!-- Idioma de la página: español -->
+
 <head>
   <meta charset="UTF-8">
+  <!-- Permite usar caracteres especiales (tildes, ñ, etc.) -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que la web sea responsive en móviles -->
+
   <title>CAMIS ALICANTE | Catálogo de camisetas</title>
+  <!-- Título que aparece en la pestaña del navegador -->
 
   <link rel="icon" href="camisAlicanteIcono.ico">
+  <!-- Icono de la pestaña -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Importa la fuente "Poppins" desde Google Fonts -->
+
   <link rel="stylesheet" href="style.css">
+  <!-- Enlace al archivo CSS externo -->
 </head>
 
 <body>
 
 <header class="navbar">
+  <!-- Barra de navegación superior -->
+
   <a href="#" aria-label="Ir al inicio" style="text-decoration: none;">
+    <!-- Enlace al inicio (aunque ahora mismo no redirige a ninguna página) -->
+
     <div class="logo">
+      <!-- Contenedor del logo -->
+
       <img src="img/camisAlicanteSinFondo.png" class="logo-img" alt="">
+      <!-- Imagen del logo -->
+
       CAMIS ALICANTE
+      <!-- Texto del logo -->
     </div>
   </a>
 </header>
 
 <main>
+  <!-- Contenido principal de la página -->
+
   <section class="hero">
+    <!-- Sección principal destacada (tipo portada) -->
+
     <div class="hero-content">
+      <!-- Contenido del hero -->
+
       <h1>Iconos del fútbol</h1>
+      <!-- Título principal -->
+
       <p>Camisetas con historia para verdaderos aficionados</p>
+      <!-- Descripción -->
 
       <a href="#coleccion" class="btn-primary" style="text-decoration: none; display: inline-block;">
+        <!-- Botón que hace scroll a la sección de productos -->
         Ver colección
       </a>
     </div>
   </section>
 
   <section class="products" id="coleccion">
+    <!-- Sección de productos con ID para navegación interna -->
+
     <h2 class="section-title">Nuestra Colección</h2>
+    <!-- Título de la sección -->
 
     <div class="grid-container">
-      <article class="card">
-        <div class="img-container">
-          <img src="img/real-madrid-1994-1996.jpeg" alt="Camiseta retro del Real Madrid temporada 1994-1996" loading="lazy">
-          <span class="badge retro">Retro</span>
-        </div>
-        <div class="card-info">
-          <h3>Real Madrid 94-96</h3>
-          <p class="price">28€</p>
-          <span class="catalogo-text">Disponible</span>
-        </div>
-      </article>
+      <!-- Contenedor en formato grid para las tarjetas -->
 
       <article class="card">
+        <!-- Tarjeta de producto -->
+
         <div class="img-container">
-          <img src="img/psg-2025-2026.jpg" alt="Camiseta PSG 2025-2026" loading="lazy">
-          <span class="badge normal">Normal</span>
+          <!-- Contenedor de la imagen -->
+
+          <img src="img/real-madrid-1994-1996.jpeg" 
+               alt="Camiseta retro del Real Madrid temporada 1994-1996" 
+               loading="lazy">
+          <!-- Imagen del producto con carga diferida (mejora rendimiento) -->
+
+          <span class="badge retro">Retro</span>
+          <!-- Etiqueta que indica que es retro -->
         </div>
+
         <div class="card-info">
-          <h3>PSG 2025-2026</h3>
-          <p class="price">18€</p>
+          <!-- Información del producto -->
+
+          <h3>Real Madrid 94-96</h3>
+          <!-- Nombre del producto -->
+
+          <p class="price">28€</p>
+          <!-- Precio -->
+
           <span class="catalogo-text">Disponible</span>
+          <!-- Estado del producto -->
         </div>
+
       </article>
     </div>
   </section>
 </main>
 
 <footer class="footer">
+  <!-- Pie de página -->
+
   <p>© 2026 CAMIS ALICANTE</p>
-  <p><a href="#" aria-label="Visita nuestro perfil de Instagram">@camisalicante</a></p>
+  <!-- Copyright -->
+
+  <p>
+    <a href="#" aria-label="Visita nuestro perfil de Instagram">
+      @camisalicante
+    </a>
+  </p>
+  <!-- Enlace a redes sociales -->
 </footer>
 
 </body>

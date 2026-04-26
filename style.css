@@ -1,4 +1,5 @@
 :root {
+  /* Variables globales reutilizables (mejor mantenimiento) */
   --color-primary: #00aaff;
   --color-primary-dark: #0088cc;
   --color-accent: #ff4d6d;
@@ -14,31 +15,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Elimina márgenes/padding por defecto y mejora el cálculo de tamaños */
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* UX: Evita que el navbar tape el título al hacer ancla */
+  /* Scroll suave al usar anclas */
+
+  scroll-padding-top: 100px;
+  /* Evita que el navbar tape contenido al hacer scroll */
 }
 
-/* ACCESIBILIDAD PARA NAVEGACIÓN POR TECLADO */
+/* ACCESIBILIDAD (teclado) */
 a:focus-visible, button:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 4px;
   border-radius: 4px;
+  /* Mejora la visibilidad al navegar con TAB */
 }
 
 /* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   color: var(--color-text);
-  line-height: 1.6; /* UX: Mejor legibilidad de texto */
+  line-height: 1.6; /* Mejora legibilidad */
+
   background: 
     linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.95)),
     url('img/fondo-futbol.jpg');
+  /* Imagen de fondo con overlay blanco */
+
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  /* Efecto parallax ligero */
 }
 
 /* NAVBAR */
@@ -46,28 +56,36 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 16px 6%;
   position: sticky;
   top: 0;
+  /* Se queda fija arriba */
+
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  /* Efecto glassmorphism */
+
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* UX: Sutil separador visual */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-primary-dark);
+
   display: flex;
   align-items: center;
   gap: 12px;
+
   transition: opacity 0.3s;
 }
 
 .logo:hover {
   opacity: 0.8;
+  /* Feedback visual */
 }
 
 .logo-img {
@@ -77,9 +95,12 @@ body {
 /* HERO */
 .hero {
   min-height: 100vh;
+  /* Ocupa toda la pantalla */
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 20px;
 }
 
@@ -87,9 +108,11 @@ body {
   background: rgba(255,255,255,0.7);
   padding: 50px 30px;
   border-radius: 24px;
+
   backdrop-filter: blur(12px);
   text-align: center;
   max-width: 600px;
+
   box-shadow: var(--shadow-sm);
 }
 
@@ -109,12 +132,17 @@ body {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
   color: white;
+
   font-weight: 600;
   font-size: 1.1rem;
+
   padding: 16px 40px;
-  border-radius: 50px; /* UX: Bordes redondeados son más "clickeables" */
+  border-radius: 50px;
+  /* Botón más "clickeable" */
+
   border: none;
   cursor: pointer;
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
 }
@@ -122,10 +150,12 @@ body {
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 170, 255, 0.4);
+  /* Efecto elevación */
 }
 
 .btn-primary:active {
-  transform: translateY(1px) scale(0.98); /* UX: Feedback táctil al hacer clic */
+  transform: translateY(1px) scale(0.98);
+  /* Feedback al hacer click */
 }
 
 /* PRODUCTOS */
@@ -143,6 +173,8 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Grid responsive automático */
+
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -153,32 +185,39 @@ body {
   background: var(--card-bg);
   border-radius: 20px;
   overflow: hidden;
+
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
   box-shadow: var(--shadow-sm);
+
   cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
+  /* Efecto hover elevación */
 }
 
-/* UX: Efecto Zoom en la imagen al hacer hover */
+/* IMAGEN */
 .img-container {
   height: 280px;
   position: relative;
-  overflow: hidden; /* Evita que el zoom se salga del contenedor */
+  overflow: hidden;
+  /* Evita que el zoom se salga */
 }
 
 .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Mantiene proporción sin deformar */
+
   transition: transform 0.5s ease;
 }
 
 .card:hover .img-container img {
-  transform: scale(1.08); /* Zoom sutil */
+  transform: scale(1.08);
+  /* Zoom al pasar el ratón */
 }
 
 /* BADGES */
@@ -186,14 +225,18 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
+
   padding: 6px 16px;
   border-radius: 50px;
+
   font-size: 0.85rem;
   font-weight: 600;
+
   letter-spacing: 0.5px;
   text-transform: uppercase;
+
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  z-index: 2; /* Asegura que no lo tape el zoom de la imagen */
+  z-index: 2;
 }
 
 .badge.retro {
@@ -206,7 +249,7 @@ body {
   color: white;
 }
 
-/* INFO */
+/* INFO TARJETA */
 .card-info {
   padding: 24px 20px;
   text-align: center;
@@ -224,20 +267,24 @@ body {
   margin-bottom: 16px;
 }
 
-/* TEXTO CATÁLOGO */
+/* TEXTO DISPONIBLE */
 .catalogo-text {
   display: inline-block;
   padding: 10px;
   width: 100%;
+
   border-radius: 10px;
   background: rgba(0, 170, 255, 0.08);
+
   color: var(--color-primary-dark);
   font-weight: 600;
+
   transition: background 0.3s;
 }
 
 .card:hover .catalogo-text {
-  background: rgba(0, 170, 255, 0.15); /* Reacciona al hover de la tarjeta */
+  background: rgba(0, 170, 255, 0.15);
+  /* Cambia con hover */
 }
 
 /* FOOTER */
@@ -245,8 +292,10 @@ body {
   text-align: center;
   padding: 50px 20px;
   margin-top: 80px;
+
   background: rgba(255,255,255,0.9);
   color: var(--color-text-muted);
+
   border-top: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -254,6 +303,7 @@ body {
   color: var(--color-accent);
   text-decoration: none;
   font-weight: 600;
+
   transition: opacity 0.3s;
 }
 
@@ -262,7 +312,7 @@ body {
   text-decoration: underline;
 }
 
-/* RESPONSIVE DESING (Móviles) */
+/* RESPONSIVE (MÓVILES) */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
